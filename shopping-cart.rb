@@ -28,4 +28,12 @@ class ShoppingCart
     @@total_after_tax
   end
 
+  def self.throw_away(item_name)
+    @@all_items.each do |item|
+      if item.name == item_name
+        @@all_items.delete(item)
+      end
+    end
+  end
+
 end

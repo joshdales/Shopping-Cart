@@ -21,4 +21,11 @@ class ShoppingCart
     @@total_before_tax
   end
 
+  def self.total
+    @@all_items.each do |item|
+      @@total_after_tax += item.total
+    end
+    @@total_after_tax
+  end
+
 end
